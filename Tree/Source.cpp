@@ -9,12 +9,15 @@ void main()
 	add(t, 7);
 	add(t, 1);
 	add(t, 9);
-	add(t, 2);
+	add(t, 11);
+	add(t, 13);
 
-	print(t);	cout << endl;
+	print(t);
+	cout << endl;
+
 	try
 	{
-		find_even(t);
+		cout << find_even(t) << endl;
 	}
 	catch (bool result)
 	{

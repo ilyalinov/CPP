@@ -48,7 +48,7 @@ bool find_even(const Tree* p)
 		}
 		else
 		{
-			throw (find_even(p->left) || find_even(p->right));
+			return (find_even(p->left) || find_even(p->right));
 		}
 	}
 
