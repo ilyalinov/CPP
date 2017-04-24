@@ -4,6 +4,7 @@
 #include "Rhomb.h"
 #include "Square.h"
 
+#include <memory>
 #include <iostream>
 
 using namespace std;
@@ -11,8 +12,10 @@ using namespace std;
 void main()
 {
 	ShapeCollection coll;
-	coll.add(new Square(1, 2, 3));
-	coll.add(new Rhomb(10, 10, 2, 3));
+	unique_ptr<Shape> p1(new Square(1, 2, 3));
+	coll.add(p1);
+	unique_ptr<Shape> p2(new Rhomb(10, 10, 2, 3));
+	coll.add(p2);
 
 	cout << coll.area() << endl;;
 }
